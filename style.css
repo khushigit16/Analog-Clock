@@ -1,0 +1,106 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
+    font-family:Arial, sans-serif;
+}
+
+.clock{
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    position:relative;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(15px);
+    border:4px solid rgba(255,255,255,0.2);
+    box-shadow:
+        0 0 30px rgba(0,0,0,0.5),
+        inset 0 0 20px rgba(255,255,255,0.1);
+}
+.number{
+    position:absolute;
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.number12{ top:15px; left:50%; transform:translateX(-50%); }
+.number1{ top:35px; right:85px; }
+.number2{ top:85px; right:35px; }
+.number3{ top:50%; right:15px; transform:translateY(-50%); }
+.number4{ bottom:85px; right:35px; }
+.number5{ bottom:35px; right:85px; }
+.number6{ bottom:15px; left:50%; transform:translateX(-50%); }
+.number7{ bottom:35px; left:85px; }
+.number8{ bottom:85px; left:35px; }
+.number9{ top:50%; left:15px; transform:translateY(-50%); }
+.number10{ top:85px; left:35px; }
+.number11{ top:35px; left:85px; }
+
+.number1 div,
+.number2 div,
+.number3 div,
+.number4 div,
+.number5 div,
+.number6 div,
+.number7 div,
+.number8 div,
+.number9 div,
+.number10 div,
+.number11 div,
+.number12 div {
+    transform: rotate(-30deg);
+}
+
+.number1 { padding-top:10px; }
+.number2 { padding-top:25px; }
+.number3 { padding-right:10px; display:flex; justify-content:flex-end; align-items:center; }
+.number6 { padding-bottom:10px; display:flex; align-items:flex-end; justify-content:center; }
+.number9 { padding-left:10px; display:flex; align-items:center; }
+
+.hand{
+    position:absolute;
+    bottom:50%;
+    left:50%;
+    transform-origin:bottom;
+    transform:translateX(-50%) rotate(0deg);
+    border-radius:10px;
+}
+
+.hour{
+    width:8px;
+    height:90px;
+    background:white;
+}
+
+.minute{
+    width:5px;
+    height:120px;
+    background:#38bdf8;
+}
+
+.second{
+    width:2px;
+    height:140px;
+    background:#ef4444;
+}
+
+.center-dot{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:18px;
+    height:18px;
+    background:white;
+    border-radius:50%;
+    transform:translate(-50%,-50%);
+    box-shadow:0 0 10px white;
+}
